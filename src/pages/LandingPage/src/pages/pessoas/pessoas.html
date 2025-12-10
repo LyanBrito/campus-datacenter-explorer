@@ -16,42 +16,38 @@
     <!-- HEADER -->
     <header>
         <div class="header-container">
-            <img src="./../../assets/img/logo/logo_branco_vermelho.svg" alt="Logo SENAI" class="logo" />
+            <a href="../../../../../../index.html"><img src="./../../assets/img/logo/logo_branco_vermelho.svg" alt="Logo SENAI" class="logo"/></a>
             <nav>
                 <div class="nav-links" role="navigation" aria-label="Menu de servidores">
                     <p>Servidor 1:</p>
                     <p>
-                        <a href="./../../../../Rack1Page/rack1Page">Armazenamento, Apache e FTP</a>
+                        <a href="../../../../Rack1Page/rack1Page.html">Armazenamento, Apache e FTP</a>
                     </p>
                     <p>Servidor 2:</p>
                     <p>
-                        <a href="./../../../../Rack2Page/rack2Page">VMware ESXi e pfSense</a>
+                        <a href="../../../../Rack2Page/rack2Page.html">VMware ESXi e pfSense</a>
                     </p>
                     <p>Servidor 3:</p>
                     <p>
-                        <a href="./../../../../Rack3Page/rack3Page.html">Active Directory (AD) e DNS</a>
+                        <a href="../../../../Rack3Page/rack3Page.html">Active Directory (AD) e DNS</a>
                     </p>
                     <p>Servidor 4:</p>
                     <p>
-                        <a href="./../../../../Rack4Page/Rack4Page.html">AD de Leitura e DNS Secundário</a>
+                        <a href="../../../../Rack4Page/Rack4Page.html">AD de Leitura e DNS Secundário</a>
                     </p>
                     <p>Servidor 5:</p>
                     <p>
-                        <a href="./../../../../Rack5Page/rack5Page.html">Zabbix, Splunk/Wazuh e VMware
+                        <a href="../../../../Rack5Page/rack5Page.html">Zabbix, Splunk/Wazuh e VMware
                             ESXi</a>
                     </p>
                     <p>Servidor 6:</p>
                     <p>
-                        <a href="./../../../../Rack6Page/rack6Page">Central de Câmeras e GitLab</a>
+                        <a href="../../../../Rack6Page/rack6Page">Central de Câmeras e GitLab</a>
                     </p>
                 </div>
 
                 <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
-                    <img src="./../../assets/img/components/menu_hamburger.svg" alt="Menu" />
-                </button>
-
-                <button class="home-btn" aria-expanded="false" onclick="location.href='/index.html'">
-                    <img src="./../../assets/img/components/home.svg" alt="Home" />
+                    <img src="../../assets/img/components/menu_hamburger.svg" alt="Menu" />
                 </button>
             </nav>
         </div>
@@ -59,6 +55,51 @@
 
     <main>
         <h1>Pessoas do DataCenter SENAI</h1>
+
+        <!-- =================== Landing Page =================== -->
+        <section class="servidor" id="listaprofessores">
+            <h2>Responsáveis pelo Projeto</h2>
+
+            <h3>Professores</h3>
+            <div class="carrossel-container">
+                <div class="carrossel">
+                    <div class="card">
+                        <img src="../../assets/img/peoples/carometro/LucasCorrea.jpg"
+                             alt="Lucas Correa" class="foto" />
+                        <div class="nome">Lucas<br />Correa</div>
+                        <div class="botoes">
+                            <a href="https://www.linkedin.com/in/lucascorreaa/" target="_blank">
+                                <img src="./../../assets/img/components/linkedin_logo.svg" alt="LinkedIn"
+                                     class="botao-icone" />
+                            </a>
+                            <a href="https://github.com/lucascorreaa" target="_blank">
+                                <img src="./../../assets/img/components/github_logo.svg" alt="GitHub"
+                                     class="botao-icone" />
+                            </a>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <img src="../../assets/img/peoples/carometro/FiamaBrenda.webp"
+                             alt="Fiama Brenda" class="foto" />
+                        <div class="nome">Fiama<br />Brenda</div>
+                        <div class="botoes">
+                            <a href="https://www.linkedin.com/in/fiama-brenda-santos-185437199/" target="_blank">
+                                <img src="./../../assets/img/components/linkedin_logo.svg" alt="LinkedIn"
+                                     class="botao-icone" />
+                            </a>
+                            <a href="https://github.com/FiamaBrenda" target="_blank">
+                                <img src="./../../assets/img/components/github_logo.svg" alt="GitHub"
+                                     class="botao-icone" />
+                            </a>
+                        </div>
+                    </div>
+<!--                    adicionar mais professores-->
+                </div>
+                <button class="prev">&#10094;</button>
+                <button class="next">&#10095;</button>
+            </div>
+        </section>
+
 
         <!-- =================== Landing Page =================== -->
         <section class="servidor" id="landingpage">
@@ -485,7 +526,7 @@
         <section class="servidor" id="servidor3">
             <h2>Servidor 3 – Active Directory (AD) e DNS</h2>
 
-            <h3>Equipe de DS</h3 id="servidor6">
+            <h3>Equipe de DS</h3>
             <div class="carrossel-container">
                 <div class="carrossel">
                     <div class="card">
