@@ -1,104 +1,68 @@
-# 🚀 Guia Essencial de Git: Conceitos e Padrões
+# 🖥️ Campus Datacenter Explorer
 
-Este é um resumo dos conceitos e padrões de nomenclatura para **Commit**, **Branch** e **Pull Request (PR)**, visando um histórico de código claro e colaborativo.
-Mais detalhes sobre nomenclarura e estrutura:
-- [Nomenclatura das Branches](https://github.com/professor-correa/campus-datacenter-explorer/issues/3)
-- [Padrão de Commits, Branches e Pull Request](https://github.com/professor-correa/campus-datacenter-explorer/issues/4)
+> Projeto acadêmico desenvolvido pela turma de **Redes de Computadores** para documentar e explorar a estrutura de racks de um datacenter do senai suiço-brasileira.  
+> Cada rack possui sua própria página dedicada, com diagramas, documentação técnica e links úteis.
 
 ---
 
-## 💡 1. Os 3 Pilares do Git
-
-| Conceito | Emoji | Definição |
-| :--- | :--- | :--- |
-| 🧩 **Commit** | 💾 | **Salva uma mudança** no histórico. **Requer** uma mensagem clara e descritiva. |
-| 🌿 **Branch** | 🌱 | Uma **linha de desenvolvimento isolada**. Permite trabalhar em recursos sem impactar o código principal (`develop`, `production`). |
-| 🔄 **Pull Request** | 🤝 | Uma **solicitação formal para mesclar** mudanças de uma branch para outra. É o ponto de **revisão de código** e validação. |
-
-> 🔑 **Por que PRs são vitais?** Eles garantem a **revisão colaborativa**, previnem a entrada de código com erros na linha principal e documentam decisões.
+## 📌 Objetivo
+O **Campus Datacenter Explorer** tem como meta:
+- Organizar a documentação dos **6 servidores** do datacenter.
+- Criar páginas independentes para cada rack (Rack1, Rack2, Rack3...).
+- Facilitar a navegação entre serviços, documentação técnica e contatos.
+- Servir como material de estudo e consulta para a turma.
 
 ---
 
-## 🍴 2. Fork: O Repositório Pessoal
+## 📂 Estrutura do Projeto
 
-Quando você não tem permissão de escrita direta no repositório principal, é necessário criar um **Fork**.
+```
 
-* **O que é um Fork?** É uma **cópia independente** do repositório original para a **sua conta** na plataforma (ex: GitHub).
-* **Propósito:** Ele permite que você faça todas as suas alterações (commits e branches) em um ambiente seguro, sem afetar o projeto principal.
-* **Fluxo:** Você forka o repositório, trabalha nas suas branches e, ao finalizar, abre um Pull Request do seu Fork para o repositório original.
-
-### 📌 Regra de Ouro para PRs
-
-> 🚨 **ABRA O PULL REQUEST SOMENTE QUANDO O TRABALHO ESTIVER CONCLUÍDO E PRONTO PARA REVISÃO.**
-
-Mantenha suas alterações no seu Fork até que a feature ou correção esteja completa, testada localmente e as mensagens de commit estejam limpas e padronizadas.
+```
 
 ---
 
-## 🏷️ 3. Padrões de Nomenclatura
-
-A padronização é crucial para automatizar ferramentas e entender o histórico rapidamente.
-
-### 📝 Padrão de Commits
-
-Formato: `tipo: descrição da mudança` (ex: `feat: created header component`).
-
-| Tipo | Emoji | Significado | Exemplo |
-| :--- | :--- | :--- | :--- |
-| **`feat:`** | 🚀 | Nova **feature** ou adição. | `feat: added user profile page` |
-| **`fix:`** | 🧰 | **Correção** de bugs e erros. | `fix: resolved values on header` |
-| **`docs:`** | 📘 | Mudanças na **documentação** (`README.md`). | `docs: updated contribution guide` |
-| **`refactor:`** | 🧱 | Reestruturação que **não corrige bug** nem adiciona feature. | `refactor: simplified auth logic` |
-| **`chore:`** | ⚙️ | Mudanças **estruturais** (atualização de pacotes). | `chore: updated all dependencies` |
-| **`assets:`** | 🖼️ | Adição de arquivos **estáticos** (imagens, ícones). | `assets: added new background image` |
-| **`wip:`** | 🚧 | *Work In Progress* — código **incompleto**. | `wip: creating new login flow` |
+## ⚙️ Tecnologias
+- **HTML5** → estrutura das páginas
+- **CSS3** → estilos globais e responsivos
+- **JavaScript (ES6+)** → interações (dropdowns, scroll suave, menu hamburguer)  
 
 ---
 
-### 🌿 Padrão de Branches
-
-Use **camelCase**. Formato: `tipo/nomeDaBranch`.
-
-| Tipo | Foco | Exemplo (camelCase) |
-| :--- | :--- | :--- |
-| `feat/` | Criação de **novas features**. | `feat/createdRack1Header` |
-| `fix/` | **Correção** de bugs. | `fix/headerComponentAlignment` |
-| `chore/` | Mudanças **estruturais**. | `chore/updatedDependencies` |
-| `refactor/` | **Refatoração** de código. | `refactor/apiConnection` |
-
-### 🔄 Padrão de Pull Requests (PRs)
-
-Use o tipo entre **colchetes `[ ]`** e o nome em **Title Case**.
-
-| Tipo | Foco | Exemplo (Title Case) |
-| :--- | :--- | :--- |
-| `[FEAT]` | Nova feature **completa**. | `[FEAT] Created RACK 1 Page` |
-| `[FIX]` | **Correção** significante. | `[FIX] User Login Issue` |
-| `[REFACTOR]` | Refatoração. | `[REFACTOR] Global Styles` |
+## 🚀 Como rodar
+1. Clone o repositório:
+   ```bash
+   git clone https://github.com/srjuninn/campus-datacenter-explorer.git
+   ```
+2. Acesse a pasta do projeto:
+   ```bash
+   cd campus-datacenter-explorer
+   ```
+3. Abra o projeto no navegador (exemplo usando VSCode Live Server):
+   ```bash
+   http://127.0.0.1:5500/src/pages/Rack3Page/rack3Page.html
+   ```
 
 ---
 
-## 🗺️ 4. Fluxo de Integração (Git Flow Básico)
+## 📖 Boas práticas de Git
+Este projeto segue um fluxo **Git Flow** simplificado:
+- **Commits** → `feat: descrição`, `fix: descrição`, `chore: descrição`
+- **Branches** → `feat/createdRack1Page`, `fix/footerLayout`
+- **Pull Requests** → `[FEAT] Created Rack1 Page`
 
-⚠️ **REGRA DE OURO:** Nunca faça commit direto nas branches principais (`develop`, `production`).
+---
 
-### 🔹 Branches de Trabalho (`feat/`, `fix/`, etc.)
-* São branches **temporárias** derivadas de `develop`.
-* O trabalho individual é feito aqui.
-* Após o *merge* para `develop`, elas **devem ser deletadas**.
+## 👨‍💻 Colaboradores
+- Rack 1 ()
+- Rack 2 ()
+- Rack 3 ()
+- Rack 4 ()
+- Rack 5 ()
+- Rack 6 ()
+- Landingpage ()
 
-### 🔹 `develop` (Integração)
-* É a branch onde o código em desenvolvimento é **reunido e testado**.
-* Recebe *merge* das branches de *feature* após aprovação do PR.
+---
 
-### 🔹 `production` (Estável)
-* Contém o código **finalizado e estável**, pronto para *deploy* no ambiente real.
-* **Só recebe *merge* da `develop`** quando o código está validado e liberado para release.
-
-### ⚙️ O Fluxo
-
-```mermaid
-graph LR
-    A[feat/minha-feature] --> B(Pull Request);
-    B --> C(develop);
-    C --> D(production);
+## 📜 Licença
+Este projeto é de uso acadêmico e não possui fins comerciais.
